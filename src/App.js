@@ -23,7 +23,7 @@ function App() {
           <div>
             <Routes>
               <Route 
-                path="/" element={<Home />}
+                path="/" element={user ? <Navigate to="/" /> : <Home />}
               />
               <Route 
                 path="/login" element={user ? <Navigate to ="/dashboard" /> : <Login />}
