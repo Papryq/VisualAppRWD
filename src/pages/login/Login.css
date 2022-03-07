@@ -1,0 +1,6 @@
+.login {
+    min-height: 100vh;
+    min-width: 100vh;
+    background-image: url("../../assets/loginbg.jpg");
+    overflow: hidden;
+}
