@@ -8,7 +8,7 @@ import './App.css';
 import Home from './home/Home';
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
-import Dashboard from './pages/dashboard/Dashboard'
+import Dashboard from './components/Dashboard'
 
 
 
@@ -19,11 +19,13 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          {user && <Dashboard  path="/dashboard" />}
           <div>
             <Routes>
               <Route 
-                path="/" element={user ? <Navigate to="/" /> : <Home />}
+                path="dashboard" element={user ? <Dashboard /> : <Navigate to="/" />} 
+              />
+              <Route 
+                path="/" element={user ? <Navigate to="/dashboard" /> : <Home />}
               />
               <Route 
                 path="/login" element={user ? <Navigate to ="/dashboard" /> : <Login />}
