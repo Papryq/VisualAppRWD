@@ -8,7 +8,9 @@ import './App.css';
 import Home from './home/Home';
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
-import Dashboard from './components/Dashboard'
+import Dashboard from './pages/dashboard/Dashboard'
+import Sidebar from './components/Sidebar'
+import MemoryGame from './pages/memoryGame/MemoryGame';
 
 
 
@@ -19,22 +21,26 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          <div>
+        <div className="flex">
+        {user && <Sidebar />}
             <Routes>
               <Route 
-                path="dashboard" element={user ? <Dashboard /> : <Navigate to="/" />} 
+                path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />}
+              />
+              <Route 
+                path="/signup" element={user ? <Navigate to="/dashboard" /> : <Signup />}
               />
               <Route 
                 path="/" element={user ? <Navigate to="/dashboard" /> : <Home />}
               />
               <Route 
-                path="/login" element={user ? <Navigate to ="/dashboard" /> : <Login />}
+                path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/" />}
               />
               <Route 
-                path="/signup" element={user ? <Navigate to ="/dashboard" /> : <Signup />}
+                path="memorygame" element={user ? <MemoryGame /> : <Navigate to="/" />}
               />
             </Routes>
-          </div>
+        </div>
         </BrowserRouter>
       )}
     </div>
