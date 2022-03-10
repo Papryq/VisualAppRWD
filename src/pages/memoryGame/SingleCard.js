@@ -12,7 +12,7 @@ const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
     }
 
     return ( 
-    <div className="card max-sm:w-1/2">
+    <div className="card max-sm:w-1/2 cardSelectStyle">
         <div className={flipped ? "flipped" : ""}>
           <img className="front" src={card.src} alt="card front" />
           <img 

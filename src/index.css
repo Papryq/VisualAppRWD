@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Lobster&display=swap');
 
 
 .btn {
@@ -50,4 +51,8 @@
 
 .linkStyle {
     @apply block py-2.5 px-4 rounded transition duration-200 hover:text-white
+}
+
+.cardSelectStyle {
+    @apply cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110
 }

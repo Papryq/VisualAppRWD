@@ -9,8 +9,8 @@ import Home from './home/Home';
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import Dashboard from './pages/dashboard/Dashboard'
-import Sidebar from './components/Sidebar'
 import MemoryGame from './pages/memoryGame/MemoryGame';
+import TransactionHome from './pages/transactions/TransactionHome'
 
 
 
@@ -21,8 +21,6 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-        <div className="flex">
-        {user && <Sidebar />}
             <Routes>
               <Route 
                 path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />}
@@ -39,8 +37,10 @@ function App() {
               <Route 
                 path="memorygame" element={user ? <MemoryGame /> : <Navigate to="/" />}
               />
+              <Route 
+                path="/transactions" element={user ? <TransactionHome /> : <Navigate to="/" />}
+              />
             </Routes>
-        </div>
         </BrowserRouter>
       )}
     </div>
