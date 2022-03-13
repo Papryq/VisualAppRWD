@@ -1,12 +1,6 @@
 .hero {
-    min-width: 100vh;
-    min-height: 100vh;
     background-image: url("../assets/dash.jpg");
     overflow: hidden; 
-    /* background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover; */
 }
 
 .box {

@@ -89,7 +89,7 @@ export default function MemoryGame() {
               <img 
                 src={arrowBackIcon} 
                 alt="back"
-                className='absolute top-4 left-8 w-10 h-10 rotate-180  bg-purple-300 rounded-full cardSelectStyle p-1'   
+                className='absolute top-4 left-8 w-10 h-10 rotate-180 bg-purple-300 rounded-full cardSelectStyle p-1'   
               />
             </Link>
             <h1 className='flex justify-center p-4 text-6xl font-extrabold border-b border-black mx-4 max-md:text-4xl'>
