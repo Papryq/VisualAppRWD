@@ -19,6 +19,7 @@ export default function Home() {
 
   return (
     <div>
+      <Sidebar />
       <div className={styles.container}>
         <div className={styles.content}>
           {error && <p>{error}</p>}
