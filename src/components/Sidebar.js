@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useRef, useState } from 'react'
+
+// hooks
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
-import { useRef, useState } from 'react'
 import useOutsideClick from '../hooks/useOutsideClick'
 
 
@@ -45,7 +47,7 @@ export default function Sidebar() {
   <div className="fixed min-h-screen md:flex">
 
     {/*  sidebar  */}
-    <div ref={boxRef} className={` bg-violet-700 text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform md:relative transition duration-200 ease-in-out  ${isActive || boxOutsideClick ? "max-md:-translate-x-full" : "max-md:-translate-x-0"}`}>
+    <div ref={boxRef} className={`bg-violet-700 text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform md:relative transition duration-200 ease-in-out  ${isActive || boxOutsideClick ? "max-md:-translate-x-full" : "max-md:-translate-x-0"}`}>
 
       {/*  logo  */}
     <div className="text-white flex items-center px-4">
@@ -58,9 +60,10 @@ export default function Sidebar() {
         />VisualApp</span>
       </Link>  
       {/*  mobile menu button  */}
-        <img ref={boxRef}
-          className={`mx-24 w-8 h-8 bg-violet-700 hidden max-md:flex rounded border-violet-400 border-2
-          ${isOpened ? "max-md:mx-14 max-md:bg-inherit max-md:border-0" : "max-md:mx-24"}`} 
+        <img ref={boxRef} 
+          className={`w-8 h-8 hidden max-md:flex bg-violet-700 rounded border-2 
+          ${isOpened ? "max-md:mx-14" : "max-md:mx-24"}
+          ${boxOutsideClick ? "max-md:mx-24 bg-violet-700 rounded border-2 border-violet-400" : "border-0"}`} 
           onClick={() => handleClick()}
           src={SidebarArrow}
           alt="sidebar arrow" 

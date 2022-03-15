@@ -56,3 +56,7 @@
 .cardSelectStyle {
     @apply cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110
 }
+
+.dashboardText {
+    @apply cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-125  hover:text-violet-700 duration-200
+}
