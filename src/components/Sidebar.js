@@ -103,7 +103,7 @@ export default function Sidebar() {
 
       {/* Cooking ninja link */}
       <Link 
-        to="/cooking" 
+        to="/cookingApp" 
         className="linkStyle btnSidebar"
       >
         <span className="flex">

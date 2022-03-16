@@ -58,5 +58,9 @@
 }
 
 .dashboardText {
-    @apply cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-125  hover:text-violet-700 duration-200
+    @apply cursor-pointer transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-125  hover:text-violet-700 
+}
+
+.labelTransaction {
+    @apply block text-white text-sm font-bold mb-2 pb-2
 }

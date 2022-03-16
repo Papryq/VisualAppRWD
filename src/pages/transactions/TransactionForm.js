@@ -26,27 +26,29 @@ export default function TransactionForm({ uid }) {
 
   return (
       <>
-        <h3>Add a Transaction</h3>
-        <form onSubmit={handleSubmit}>
-            <label>
+        <h1 className="text-bold pb-2 my-1">Add a Transaction</h1>
+        <form className="text-neutral-200" onSubmit={handleSubmit}>
+            <label className="labelTransaction">
                 <span>Transaction name:</span>
                 <input 
+                className='inputStyle'
                 type="text"
                 required
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 />
             </label>
-            <label>
+            <label className="labelTransaction">
                 <span>Amount ($):</span>
                 <input 
+                className='inputStyle'
                 type="number"
                 required
                 onChange={(e) => setAmount(e.target.value)}
                 value={amount}
                 />
             </label>
-            <button>Add Transaction</button>
+            <button className="text-lg p-2 border-2 border-violet-700 my-4 bg-white rounded-lg text-black transition duration-300 ease-in-out hover:text-white  hover:bg-violet-400 hover:border-2 hover:border-violet-100">Add Transaction</button>
         </form>
       </>
   )

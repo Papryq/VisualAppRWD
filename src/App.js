@@ -40,6 +40,9 @@ function App() {
               <Route 
                 path="/transactions" element={user ? <TransactionHome /> : <Navigate to="/" />}
               />
+              {/* <Route 
+                path="/cookingApp" element={user ? <CookingHome /> : <Navigate to="/" />}
+              /> */}
             </Routes>
         </BrowserRouter>
       )}
